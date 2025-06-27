@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="red_primary">#DC3545</color> <!-- Warna merah untuk AppBar/NavBar -->
+    <color name="red_dark">#B02C39</color>   <!-- Warna merah yang sedikit lebih gelap untuk status bar -->
+    <color name="pink_light">#F8D7DA</color> <!-- Latar belakang fragment -->
+    <color name="pink_card">#FADADD</color>  <!-- Latar belakang card -->
+    <color name="text_dark">#333333</color>  <!-- Warna teks gelap -->
+    <color name="text_medium">#555555</color> <!-- Warna teks sedang -->
+
+
+
+</resources>

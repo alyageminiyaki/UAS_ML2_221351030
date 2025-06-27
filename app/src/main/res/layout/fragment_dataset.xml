@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Scrollable Konten -->
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/datasetTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dataset_description_title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:fontFamily="@font/kadwa"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/datasetDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/lora"
+                android:text="@string/dataset_description_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dataset_source_info"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:fontFamily="@font/lora"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvDatasetSourceLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dataset_source_link"
+                android:textColor="#8A8AFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/kadwa"
+                android:layout_marginBottom="24dp" />
+
+            <!-- List Dataset -->
+            <TextView
+                android:id="@+id/listTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dataset_list_title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:fontFamily="@font/kadwa"
+                android:layout_marginBottom="8dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal">
+
+            <!-- Grid Dataset -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+            <!-- Kolom pH -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_ph"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_ph_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_ph_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_ph_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_ph_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_ph_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Temp -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_temp"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_temp_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_temp_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_temp_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_temp_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_temp_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Taste -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_taste"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_taste_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_taste_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_taste_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_taste_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_taste_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Odor -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_odor"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_odor_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_odor_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_odor_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_odor_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_odor_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Fat -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_fat"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_fat_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_fat_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_fat_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_fat_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_fat_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Turbidity -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_turb"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_turb_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_turb_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_turb_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_turb_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_turb_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Colour -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_color"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_color_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_color_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_color_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_color_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_color_5" android:padding="4dp" />
+            </LinearLayout>
+
+            <!-- Kolom Grade -->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card_column"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/header_grade"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#888" />
+
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_grade_1" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_grade_2" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_grade_3" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_grade_4" android:padding="4dp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/data_grade_5" android:padding="4dp" />
+            </LinearLayout>
+            </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

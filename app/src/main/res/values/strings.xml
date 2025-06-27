@@ -1,0 +1,138 @@
+<resources>
+    <string name="app_name">Milk Prediction</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_tentang">Tentang</string>
+    <string name="title_fitur">Fitur</string>
+    <string name="title_arsitektur_model">Arsitektur Model</string>
+    <string name="title_simulasi">Simulasi</string>
+    <string name="title_dataset">Dataset</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- === FITUR BERDASARKAN DATASET KUALITAS SUSU === -->
+    <string name="feature_icon_description">Ikon Fitur</string>
+
+    <!-- Fitur 1: pH -->
+    <string name="feature_title_ph">pH Susu</string>
+    <string name="feature_desc_ph">Mengukur tingkat keasaman atau kebasaan susu. Nilai pH normal susu segar penting untuk kualitas.</string>
+
+    <!-- Fitur 2: Temperature -->
+    <string name="feature_title_temperature">Suhu Susu</string>
+    <string name="feature_desc_temperature">Parameter suhu susu yang memengaruhi pertumbuhan bakteri dan reaksi enzim, penting untuk menjaga kualitas.</string>
+
+    <!-- Fitur 3: Taste -->
+    <string name="feature_title_taste">Rasa Susu</string>
+    <string name="feature_desc_taste">Penilaian kualitas rasa susu. Rasa yang tidak normal dapat mengindikasikan masalah kontaminasi atau kerusakan.</string>
+
+    <!-- Fitur 4: Odor -->
+    <string name="feature_title_odor">Bau/Aroma Susu</string>
+    <string name="feature_desc_odor">Penilaian kualitas bau atau aroma susu. Bau yang tidak sedap menunjukkan penurunan kualitas atau kerusakan.</string>
+
+    <!-- Fitur 5: Fat -->
+    <string name="feature_title_fat">Kandungan Lemak Susu</string>
+    <string name="feature_desc_fat">Mengukur persentase kandungan lemak dalam susu, indikator penting dari kekayaan dan nilai gizi.</string>
+
+    <!-- Fitur 6: Turbidity -->
+    <string name="feature_title_turbidity">Kekeruhan Susu</string>
+    <string name="feature_desc_turbidity">Mengukur tingkat kekeruhan atau kejernihan susu. Kekeruhan tinggi dapat mengindikasikan kontaminasi atau penggumpalan.</string>
+
+    <!-- Fitur 7: Colour -->
+    <string name="feature_title_colour">Warna Susu</string>
+    <string name="feature_desc_colour">Mengukur warna susu. Perubahan warna dari normal dapat mengindikasikan kotoran atau masalah kesehatan ternak.</string>
+
+    <!-- === STRING LAMA UNTUK HALAMAN TENTANG APLIKASI === -->
+    <string name="storyline_content">Aplikasi Prediksi Kualitas Susu ini dikembangkan untuk membantu penggunanya dalam mengevaluasi kualitas susu secara cepat berdasarkan berbagai parameter fisik dan kimia. Tujuannya adalah untuk mendukung petani, peternak, atau siapa pun yang berkecimpung di industri susu dalam mengambil keputusan yang lebih baik terkait kualitas produk.</string>
+    <string name="dataset_link_text">Link Dataset : Milk Quality Prediction Dataset</string>
+    <string name="dataset_url">https://www.kaggle.com/datasets/carlosaguayo/milk-quality-prediction-dataset</string>
+    <string name="how_app_works_content">Aplikasi ini dirancang dengan beberapa menu utama untuk pengalaman pengguna yang optimal. Pengguna dapat memilih menu "Simulasi" untuk memasukkan parameter susu (seperti pH, suhu, rasa, bau, dan lemak) lalu aplikasi akan memprosesnya menggunakan model Machine Learning untuk memberikan prediksi kualitas susu. Selain itu, terdapat menu "Tentang Aplikasi" untuk mengetahui latar belakang dan tujuan aplikasi, "Fitur Aplikasi" untuk melihat fungsionalitas utama, dan "Arsitektur Model" untuk memahami struktur model Machine Learning yang digunakan.</string>
+
+    <!-- === STRING BARU UNTUK HALAMAN ARSITEKTUR MODEL === -->
+    <string name="arch_pre_processing_title">Pre-Processing</string>
+    <string name="arch_data_transform_title">1). Data Transform</string>
+    <string name="arch_data_transform_desc">Pada dataset, ada kolom label yang berupa object, yang dimana isi kolom tersebut harus di transform menjadi numerik.\n\nlabel encoder adalah cara agar merubah object menjadi numerik.</string>
+    <string name="arch_label_fitur_title">2). Label dan Fitur</string>
+    <string name="arch_label_fitur_desc">Menentukan Label dan fitur dari dataset, label yang dipilih adalah kolom Label yang sudah di transform menjadi numerik dan sisa nya 7 fitur tanpa kolom label.</string>
+    <string name="arch_modeling_title">Modeling</string>
+    <string name="arch_train_data_title">1). Train Data dan Standarisasi</string>
+    <string name="arch_train_data_desc">Memisahkan dataset menjadi data training dan testing, lalu melakukan normalisasi data menggunakan StandardScaler agar rentang nilai fitur menjadi seragam.</string>
+    <string name="arch_build_ann_title">2). Membangun Model ANN</string>
+    <string name="arch_build_ann_desc">Membangun model Artificial Neural Network (ANN) dengan layer Dense yang memiliki fungsi aktivasi \'relu\' untuk hidden layer dan \'sigmoid\' untuk output layer.</string>
+    <string name="arch_compile_model_title">3). Compile Model</string>
+    <string name="arch_compile_model_desc">Model dikompilasi menggunakan optimizer \'adam\' dan fungsi loss \'binary_crossentropy\' serta metrik \'accuracy\'.</string>
+    <string name="arch_train_model_title">4). Melatih Model</string>
+    <string name="arch_train_model_desc">Model dilatih menggunakan data training selama beberapa epoch dengan ukuran batch tertentu dan validasi split untuk memantau performa.</string>
+    <string name="arch_eval_accuracy_title">5). Evaluasi Akurasi</string>
+    <string name="arch_eval_accuracy_desc">Menghitung akurasi model pada data test untuk menilai seberapa baik model dapat memprediksi kelas target.</string>
+    <string name="arch_model_sim_title">6). Model Simulation</string>
+    <string name="arch_model_sim_desc">Melakukan simulasi dengan input data baru untuk memverifikasi kemampuan model dalam memprediksi kualitas susu secara real-time.</string>
+    <string name="arch_save_model_title">7). Save Model</string>
+    <string name="arch_save_model_desc">Menyimpan model yang telah dilatih ke format TensorFlow Lite (.tflite) agar dapat diintegrasikan dan dijalankan di aplikasi mobile dengan efisien.</string>
+
+    <!-- === STRING BARU UNTUK HALAMAN DATASET === -->
+    <string name="dataset_description_title">Deskripsi Dataset</string>
+    <string name="dataset_description_content">Dataset ini berisi berbagai parameter fisik dan kimia dari sampel susu yang digunakan untuk memprediksi kualitasnya. Dataset terdiri dari 8 kolom (fitur) yang mencakup pH, Suhu, Rasa, Bau, Lemak, Kekeruhan, dan Warna, serta 1 kolom target yaitu Kualitas (Grade).\n\nData ini sangat penting untuk membuat keputusan yang dapat meningkatkan produktivitas, pengelolaan sumber daya, dan kesehatan produk susu secara keseluruhan.</string>
+    <string name="dataset_list_title">Contoh Data Sampel (5 Baris Pertama)</string>
+    <string name="dataset_source_info">Sumber dataset dapat berupa data dari Kaggle.</string>
+    <string name="dataset_source_link">Link Dataset : Milk Quality Prediction Dataset</string>
+    <string name="dataset_source_url">https://www.kaggle.com/datasets/cpluzshrijayan/milkquality</string>
+
+    <!-- Header Tabel -->
+    <string name="header_ph">pH</string>
+    <string name="header_temp">Temp</string>
+    <string name="header_taste">Rasa</string>
+    <string name="header_odor">Bau</string>
+    <string name="header_fat">Lemak</string>
+    <string name="header_turb">Keruh</string>
+    <string name="header_color">Warna</string>
+    <string name="header_grade">Grade</string>
+
+    <!-- Contoh Data Baris 1 -->
+    <string name="data_ph_1">6.6</string>
+    <string name="data_temp_1">35</string>
+    <string name="data_taste_1">1</string>
+    <string name="data_odor_1">0</string>
+    <string name="data_fat_1">1.0</string>
+    <string name="data_turb_1">0.0</string>
+    <string name="data_color_1">254</string>
+    <string name="data_grade_1">High</string>
+
+    <!-- Contoh Data Baris 2 -->
+    <string name="data_ph_2">6.6</string>
+    <string name="data_temp_2">36</string>
+    <string name="data_taste_2">0</string>
+    <string name="data_odor_2">1</string>
+    <string name="data_fat_2">0.5</string>
+    <string name="data_turb_2">1.0</string>
+    <string name="data_color_2">253</string>
+    <string name="data_grade_2">Low</string>
+
+    <!-- Contoh Data Baris 3 -->
+    <string name="data_ph_3">6.7</string>
+    <string name="data_temp_3">40</string>
+    <string name="data_taste_3">1</string>
+    <string name="data_odor_3">0</string>
+    <string name="data_fat_3">1.2</string>
+    <string name="data_turb_3">0.0</string>
+    <string name="data_color_3">255</string>
+    <string name="data_grade_3">Medium</string>
+
+    <!-- Contoh Data Baris 4 -->
+    <string name="data_ph_4">6.5</string>
+    <string name="data_temp_4">38</string>
+    <string name="data_taste_4">0</string>
+    <string name="data_odor_4">0</string>
+    <string name="data_fat_4">1.5</string>
+    <string name="data_turb_4">1.0</string>
+    <string name="data_color_4">250</string>
+    <string name="data_grade_4">Low</string>
+
+    <!-- Contoh Data Baris 5 -->
+    <string name="data_ph_5">6.8</string>
+    <string name="data_temp_5">37</string>
+    <string name="data_taste_5">1</string>
+    <string name="data_odor_5">1</string>
+    <string name="data_fat_5">0.8</string>
+    <string name="data_turb_5">0.0</string>
+    <string name="data_color_5">251</string>
+    <string name="data_grade_5">High</string>
+</resources>

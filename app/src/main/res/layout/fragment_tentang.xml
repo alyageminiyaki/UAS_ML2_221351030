@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragment.TentangFragment">
+
+    <ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Bagian Storyline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Storyline"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/kadwa"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvStorylineContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="@font/lora"
+            android:text="@string/storyline_content"
+            android:textColor="#555555"
+            android:textSize="16sp" />
+
+        <!-- Bagian Link Dataset -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dataset diambil dari website kaggle yang dibuat oleh Shrijayan dengan judul Milk Quality Prediction."
+            android:textColor="#555555"
+            android:textSize="16sp"
+            android:fontFamily="@font/lora"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvDatasetLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dataset_link_text"
+            android:textColor="#8A8AFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/lora"
+            android:textStyle="bold"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="openDatasetLink"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Bagian Cara Kerja Aplikasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cara Kerja Aplikasi"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/kadwa"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvHowAppWorksContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_app_works_content"
+            android:textColor="#555555"
+            android:textSize="16sp"
+            android:fontFamily="@font/lora"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

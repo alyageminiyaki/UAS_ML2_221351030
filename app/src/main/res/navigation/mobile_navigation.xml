@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.milk.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_tentangFragment"
+            android:label="@string/title_tentang"
+            app:destination="@id/tentangFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_fiturFragment"
+            android:label="@string/title_fitur"
+            app:destination="@id/fiturFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_arsitekturModelFragment"
+            android:label="@string/title_arsitektur_model"
+            app:destination="@id/arsitekturModelFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_simulasiFragment"
+            android:label="@string/title_simulasi"
+            app:destination="@id/simulasiFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_home_to_datasetFragment"
+            app:destination="@id/datasetFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.milk.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tentangFragment"
+        android:name="com.example.milk.fragment.TentangFragment"
+        android:label="fragment_tentang"
+        tools:layout="@layout/fragment_tentang" />
+    <fragment
+        android:id="@+id/fiturFragment"
+        android:name="com.example.milk.fragment.FiturFragment"
+        android:label="fragment_fitur"
+        tools:layout="@layout/fragment_fitur" />
+    <fragment
+        android:id="@+id/arsitekturModelFragment"
+        android:name="com.example.milk.fragment.ArsitekturModelFragment"
+        android:label="fragment_arsitektur_model"
+        tools:layout="@layout/fragment_arsitektur_model" />
+    <fragment
+        android:id="@+id/simulasiFragment"
+        android:name="com.example.milk.fragment.SimulasiFragment"
+        android:label="fragment_simulasi"
+        tools:layout="@layout/fragment_simulasi" />
+    <fragment
+        android:id="@+id/datasetFragment"
+        android:name="com.example.milk.fragment.DatasetFragment"
+        android:label="fragment_dataset"
+        tools:layout="@layout/fragment_dataset" />
+</navigation>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- ImageView untuk Ikon Kendi Susu -->
+            <ImageView
+                android:id="@+id/iconMilkJug"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/milk"
+                android:contentDescription="Milk Jug Icon"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Judul Utama (PREDIKSI) -->
+            <TextView
+                android:id="@+id/tvPredictionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PREDIKSI"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa" />
+
+            <!-- Judul Sub (KUALITAS SUSU) -->
+            <TextView
+                android:id="@+id/tvQualityTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KUALITAS SUSU"
+                android:textColor="#333333"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kadwa"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Deskripsi -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Membuat keputusan berdasarkan informasi tentang kualitas dan parameter susu."
+                android:textColor="#555555"
+                android:textSize="14sp"
+                android:fontFamily="@font/lora"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- GridLayout untuk 5 Ikon Navigasi (Tentang, Fitur, Modeling, Dataset, Simulasi) -->
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true"
+                android:layout_marginBottom="16dp">
+
+            <!-- Ikon 1: Tentang -->
+            <LinearLayout
+                android:id="@+id/llTentang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iconTentang"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_tentang"
+                    android:contentDescription="Tentang Icon"
+                    android:background="@drawable/circle_background_light_pink"
+                    android:padding="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/kadwa"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Ikon 2: Fitur -->
+            <LinearLayout
+                android:id="@+id/llFitur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iconFitur"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_fitur"
+                    android:contentDescription="Fitur Icon"
+                    android:background="@drawable/circle_background_light_pink"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fitur"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/kadwa"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Ikon 3: Modeling -->
+            <LinearLayout
+                android:id="@+id/llModeling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/iconModeling"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_model"
+                    android:contentDescription="Modeling Icon"
+                    android:background="@drawable/circle_background_light_pink"
+                    android:padding="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modeling"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/kadwa"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:alignmentMode="alignMargins"
+                android:useDefaultMargins="true">
+
+                <!-- Ikon 4: Dataset -->
+                <LinearLayout
+                    android:id="@+id/llDataset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconDataset"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_dataset"
+                        android:contentDescription="Dataset Icon"
+                        android:background="@drawable/circle_background_light_pink"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dataset"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/kadwa"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Ikon 5: Simulasi -->
+                <LinearLayout
+                    android:id="@+id/llSimulasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/iconSimulasi"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/ic_simulasi"
+                        android:contentDescription="Simulasi Icon"
+                        android:background="@drawable/circle_background_light_pink"
+                        android:padding="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Simulasi"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/kadwa"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

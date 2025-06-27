@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".fragment.SimulasiFragment">
+
+    <EditText
+        android:id="@+id/etpH"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="pH (max: 6.25 - 6.90)"
+        android:fontFamily="@font/lora"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Temperature (max: 34'C - 45.20'C)"
+        android:inputType="numberDecimal"
+        android:fontFamily="@font/lora"
+        app:layout_constraintTop_toBottomOf="@+id/etpH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/etTaste"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Taste (0 or 1)"
+        android:fontFamily="@font/lora"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etTemperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/etOdor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Odor (0 or 1)"
+        android:inputType="numberDecimal"
+        android:fontFamily="@font/lora"
+        app:layout_constraintTop_toBottomOf="@+id/etTaste"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/etFat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Fat (0 or 1)"
+        android:fontFamily="@font/lora"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etOdor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Quality"
+        android:fontFamily="@font/kadwa"
+        app:layout_constraintTop_toBottomOf="@+id/etFat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prediction: "
+        android:fontFamily="@font/kadwa"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
